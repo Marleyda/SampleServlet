@@ -1,1 +1,9 @@
 language: java
+
+addons:
+    sonarcloud:
+        organization: "<marleyda-github>"
+        token:
+            secure: <39d2da63598f173e25c05deaf5ad30c0e686569f>
+script:
+    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
